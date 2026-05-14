@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tavish Rja — Web Developer</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Elements -->
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+  <div id="cursor-dot"></div>
+  <canvas id="canvas-bg"></canvas>
+  <div class="glow-blob gb-teal"></div>
+  <div class="glow-blob gb-gold"></div>
+  <div class="glow-blob gb-blue"></div>
+  <div id="particle-container"></div>
+
+  <!-- ══ NAV ══ -->
+  <nav>
+    <div class="nav-logo">Tavish Rja</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="nav-cta">Hire Me ↗</a>
+  </nav>
+
+  <!-- ══ HERO ══ -->
+  <section id="hero">
+    <div class="hero-mesh"></div>
+    <div class="hero-line"></div>
+
+    <div class="hero-left">
+      <div class="h-tag">
+        <div class="h-tag-line"></div>
+        <span class="h-tag-text">Full Stack Developer</span>
+      </div>
+
+      <h1 class="hero-name">
+        <span class="hn-solid">Tavish</span>
+        <span class="hn-teal">Rja</span>
+        <span class="hn-ghost">Dev.</span>
+      </h1>
+
+      <div class="hero-role">Apprentice Trainee · NHPC Limited</div>
+
+      <p class="hero-desc">
+        Building responsive, accessible web applications with <b>Node.js</b> and modern JavaScript.
+        Focused on clean architecture, UI performance, and shipping code that makes an impact.
+      </p>
+
+      <div class="hero-pills">
+        <span class="pill">Node.js</span>
+        <span class="pill">JavaScript ES6</span>
+        <span class="pill">HTML5 / CSS3</span>
+        <span class="pill">MySQL</span>
+        <span class="pill">Git + Vite</span>
+        <span class="pill">Bootstrap</span>
+      </div>
+
+      <div class="hero-btns">
+        <a href="#projects" class="btn-fill">⚡ View My Work</a>
+        <a href="https://pradeep-edits-portfolio.netlify.app/" target="_blank" class="btn-outline">↗ Live Project</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="code-card">
+        <div class="wdots">
+          <span class="wd wd-r"></span>
+          <span class="wd wd-y"></span>
+          <span class="wd wd-g"></span>
+        </div>
+        <div class="cline"><span class="cm">// tavish.config.js</span></div>
+        <div class="cline"></div>
+        <div class="cline"><span class="kw">const</span> <span class="vr">dev</span> = {</div>
+        <div class="cline">&nbsp;&nbsp;<span class="fn">name</span>: <span class="str">"Tavish Rja"</span>,</div>
+        <div class="cline">&nbsp;&nbsp;<span class="fn">role</span>: <span class="str">"Full Stack Dev"</span>,</div>
+        <div class="cline">&nbsp;&nbsp;<span class="fn">org</span>: <span class="str">"NHPC Limited"</span>,</div>
+        <div class="cline">&nbsp;&nbsp;<span class="fn">city</span>: <span class="str">"Faridabad 🇮🇳"</span>,</div>
+        <div class="cline">&nbsp;&nbsp;<span class="fn">bugs</span>: <span class="num">35+</span><span class="cm"> /*
+            resolved */</span>,</div>
+        <div class="cline">&nbsp;&nbsp;<span class="fn">a11y</span>: <span class="str">"+15%"</span>,</div>
+        <div class="cline">&nbsp;&nbsp;<span class="fn">open</span>: <span class="kw">true</span>,</div>
+        <div class="cline">};</div>
+        <div class="cline"></div>
+        <div class="cline"><span class="kw">export default</span> <span class="vr">dev</span>;<span class="caret-blink">
+            ▌</span></div>
+      </div>
+
+      <div class="metrics-card">
+        <div class="mc-item">
+          <div class="mc-val">10+</div>
+          <div class="mc-label">Components</div>
+        </div>
+        <div class="mc-item">
+          <div class="mc-val">35+</div>
+          <div class="mc-label">Bugs Fixed</div>
+        </div>
+        <div class="mc-item">
+          <div class="mc-val">+15%</div>
+          <div class="mc-label">A11y Score</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      Scroll to explore
+    </div>
+  </section>
+
+  <!-- ══ ABOUT ══ -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="r-left">
+        <div class="about-card">
+          <div class="card-corner cc-tl"></div>
+          <div class="card-corner cc-br"></div>
+          <div class="av-emoji">👨‍💻</div>
+          <div class="av-name">Tavish Rja</div>
+          <div class="av-role">Frontend Full Stack Developer</div>
+          <div class="av-org">🏢 NHPC Limited</div>
+          <div class="av-rows">
+            <div class="av-row">📧 <a href="mailto:tavishrja786@gmail.com">tavishrja786@gmail.com</a></div>
+            <div class="av-row">📱 +91 9711007789</div>
+            <div class="av-row">📍 Faridabad, Haryana, India</div>
+            <div class="av-row">🔗 <a href="https://www.linkedin.com/in/tavish-rja/" target="_blank">LinkedIn</a>
+              &nbsp;·&nbsp; <a href="https://github.com/TavishRja" target="_blank">GitHub</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-text r-rgt">
+        <div class="sec-eyebrow">About Me</div>
+        <h2 class="sec-title">Crafting interfaces that <em>actually perform</em></h2>
+        <p>I'm <b>Tavish Rja</b>, a frontend-focused full stack developer serving as an <b>Apprentice Trainee at NHPC
+            Limited</b> — India's premier hydropower company. I build responsive, performant web applications with
+          React.js and modern JavaScript.</p>
+        <p>At NHPC, I've delivered <b>10+ responsive UI components</b> that improved accessibility scores by 15%,
+          squashed 20+ bugs under senior guidance, and produced documentation that meaningfully improved team onboarding
+          efficiency.</p>
+        <p>I'm passionate about <b>clean code architecture</b>, UI performance optimisation, and AI-assisted development
+          workflows. I'm actively growing my backend skills through MERN stack training.</p>
+        <div class="about-metrics">
+          <div class="am-item">
+            <div class="am-val">10+</div>
+            <div class="am-label">Components Built</div>
+          </div>
+          <div class="am-item">
+            <div class="am-val">35+</div>
+            <div class="am-label">Bugs Resolved</div>
+          </div>
+          <div class="am-item">
+            <div class="am-val">+15%</div>
+            <div class="am-label">Accessibility</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SKILLS ══ -->
+  <section id="skills">
+    <div class="r-up">
+      <div class="sec-eyebrow">Technical Arsenal</div>
+      <h2 class="sec-title">Skills &amp; <em>Technologies</em></h2>
+    </div>
+    <div class="skills-layout">
+      <div class="sk-list r-left">
+        <div class="sk-card">
+          <div class="sk-head">
+            <div class="sk-icon">🎨</div>
+            <div class="sk-name">Frontend Development</div>
+          </div>
+          <div class="sk-tags">
+            <span class="sk-tag">React.js</span><span class="sk-tag">HTML5</span>
+            <span class="sk-tag">CSS3</span><span class="sk-tag">Bootstrap</span><span class="sk-tag">JS ES6</span>
+          </div>
+        </div>
+        <div class="sk-card">
+          <div class="sk-head">
+            <div class="sk-icon">🗄️</div>
+            <div class="sk-name">Languages & Database</div>
+          </div>
+          <div class="sk-tags">
+            <span class="sk-tag">Core Java</span><span class="sk-tag">SQL</span><span class="sk-tag">MySQL</span>
+          </div>
+        </div>
+        <div class="sk-card">
+          <div class="sk-head">
+            <div class="sk-icon">⚙️</div>
+            <div class="sk-name">Tools & Workflow</div>
+          </div>
+          <div class="sk-tags">
+            <span class="sk-tag">GitHub</span><span class="sk-tag">Vite</span>
+            <span class="sk-tag">PDF.js</span><span class="sk-tag">AI Dev Tools</span>
+          </div>
+        </div>
+        <div class="sk-card">
+          <div class="sk-head">
+            <div class="sk-icon">🚀</div>
+            <div class="sk-name">Currently Learning</div>
+          </div>
+          <div class="sk-tags">
+            <span class="sk-tag">MERN Stack</span><span class="sk-tag">Node.js</span>
+            <span class="sk-tag">MongoDB</span><span class="sk-tag">Express.js</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bars-box r-rgt" id="barsBox">
+        <div class="bars-title">Proficiency Levels</div>
+        <div class="bars-list">
+          <div class="bar-item">
+            <div class="bar-top"><span class="bar-name">HTML5 &amp; CSS3</span><span class="bar-pct">88%</span></div>
+            <div class="bar-track">
+              <div class="bar-fill" data-w=".88"></div>
+            </div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-top"><span class="bar-name">JavaScript (ES6+)</span><span class="bar-pct">80%</span></div>
+            <div class="bar-track">
+              <div class="bar-fill" data-w=".80"></div>
+            </div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-top"><span class="bar-name">React.js</span><span class="bar-pct">75%</span></div>
+            <div class="bar-track">
+              <div class="bar-fill" data-w=".75"></div>
+            </div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-top"><span class="bar-name">GitHub &amp; Vite</span><span class="bar-pct">78%</span></div>
+            <div class="bar-track">
+              <div class="bar-fill" data-w=".78"></div>
+            </div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-top"><span class="bar-name">MySQL / SQL</span><span class="bar-pct">72%</span></div>
+            <div class="bar-track">
+              <div class="bar-fill" data-w=".72"></div>
+            </div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-top"><span class="bar-name">Core Java</span><span class="bar-pct">70%</span></div>
+            <div class="bar-track">
+              <div class="bar-fill" data-w=".70"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PROJECTS ══ -->
+  <section id="projects">
+    <div class="r-up">
+      <div class="sec-eyebrow">Portfolio</div>
+      <h2 class="sec-title">Featured <em>Projects</em></h2>
+    </div>
+    <div class="proj-grid">
+
+      <div class="proj-card r-up">
+        <div class="proj-thumb pt-pdf">📄<div class="proj-ov"></div>
+        </div>
+        <div class="proj-badge">NHPC Internal</div>
+        <div class="proj-body">
+          <div class="proj-num">01 /</div>
+          <div class="proj-title">PDF Editor Annotation Tool</div>
+          <div class="proj-desc">NHPC internal workflow-inspired web-based PDF editor with real-time rendering and
+            interactive annotation capabilities.</div>
+          <ul class="proj-points">
+            <li class="proj-point">Real-time PDF rendering via PDF.js for seamless in-browser viewing</li>
+            <li class="proj-point">Shape insertion, signature upload &amp; interactive document editing</li>
+            <li class="proj-point">Improved internal document handling efficiency by 18%</li>
+          </ul>
+          <div class="proj-stack"><span>PDF.js</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span></div>
+          <div class="proj-actions">
+            <a href="#" class="proj-link">↗ Live Demo</a>
+            <a href="#" class="proj-link">⌥ Source Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card r-up">
+        <div class="proj-thumb pt-web">🌐<div class="proj-ov"></div>
+        </div>
+        <div class="proj-badge">Freelance · Live</div>
+        <div class="proj-body">
+          <div class="proj-num">02 /</div>
+          <div class="proj-title">Client Portfolio Website</div>
+          <div class="proj-desc">Production-ready custom portfolio website delivered for a freelance client — clean UI,
+            smooth JS interactions, fully cross-device compatible.</div>
+          <ul class="proj-points">
+            <li class="proj-point">Smooth scrolling, structured sections &amp; JavaScript interactivity</li>
+            <li class="proj-point">Fully responsive — optimised for all screen sizes and devices</li>
+            <li class="proj-point">Deployed live on Netlify with optimised load performance</li>
+          </ul>
+          <div class="proj-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+          <div class="proj-actions">
+            <a href="https://pradeep-edits-portfolio.netlify.app/" target="_blank" class="proj-link">↗ Live Site</a>
+            <a href="https://github.com/TavishRja/Freelance-Work" class="proj-link">⌥ Source Code</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ EXPERIENCE ══ -->
+  <section id="experience">
+    <div class="r-up">
+      <div class="sec-eyebrow">Work History</div>
+      <h2 class="sec-title">Professional <em>Experience</em></h2>
+    </div>
+    <div class="exp-wrap r-up">
+      <div class="exp-status">
+        <span class="live-dot"></span>
+        Nov 2025 — Present · Active
+      </div>
+      <div class="exp-title">Apprentice Trainee</div>
+      <div class="exp-company">NHPC Limited — National Hydroelectric Power Corporation</div>
+      <div class="exp-location">📍 Faridabad, Haryana, India</div>
+      <div class="exp-bullets">
+        <div class="exp-bullet">Developed 10+ responsive UI components using React.js, improving accessibility score by
+          15%.</div>
+        <div class="exp-bullet">Optimized application performance by identifying and resolving 35+ bugs under senior
+          developer guidance.</div>
+        <div class="exp-bullet">Documented software modules and user manuals, significantly improving onboarding
+          efficiency for new team members.</div>
+      </div>
+      <div class="exp-tags">
+        <span class="exp-tag">Node.js</span>
+        <span class="exp-tag">JavaScript ES6</span>
+        <span class="exp-tag">HTML5</span>
+        <span class="exp-tag">CSS3</span>
+        <span class="exp-tag">Bootstrap</span>
+        <span class="exp-tag">Git</span>
+        <span class="exp-tag">Vite</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ EDUCATION ══ -->
+  <section id="education">
+    <div class="r-up">
+      <div class="sec-eyebrow">Academic Background</div>
+      <h2 class="sec-title"><em>Education</em> &amp; Certifications</h2>
+    </div>
+    <div class="edu-grid r-up">
+      <div class="edu-card">
+        <span class="edu-ico">🎓</span>
+        <div class="edu-year">Oct 2021 — May 2025</div>
+        <div class="edu-deg">B.Tech — Computer Science Engineering</div>
+        <div class="edu-inst">Chaudhary Devi Lal University, Sirsa, Haryana</div>
+        <span class="edu-grade">📊 Percentage: 71.3%</span>
+      </div>
+      <div class="edu-card">
+        <span class="edu-ico">⚙️</span>
+        <div class="edu-year">Nov 2025 — Present</div>
+        <div class="edu-deg">Apprenticeship Training Program</div>
+        <div class="edu-inst">NHPC Limited — Ministry of Power, Govt. of India, Faridabad</div>
+        <span class="edu-grade">✅ Active Trainee</span>
+      </div>
+    </div>
+    <div class="certs-grid r-up">
+      <div class="cert-item">
+        <span class="cert-ico">🏆</span>
+        <div>
+          <div class="cert-name">Technology Job Simulation</div>
+          <div class="cert-by">Deloitte Australia</div>
+        </div>
+      </div>
+      <div class="cert-item">
+        <span class="cert-ico">📦</span>
+        <div>
+          <div class="cert-name">MERN Stack Development</div>
+          <div class="cert-by">Apna College</div>
+        </div>
+      </div>
+      <div class="cert-item">
+        <span class="cert-ico">📜</span>
+        <div>
+          <div class="cert-name">JavaScript</div>
+          <div class="cert-by">Udemy</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT ══ -->
+  <section id="contact">
+    <div class="r-up">
+      <div class="sec-eyebrow">Let's Connect</div>
+      <h2 class="sec-title">Open to <em>Opportunities</em></h2>
+    </div>
+    <div class="contact-layout">
+      <div class="r-left">
+        <p class="contact-intro">Whether it's a project collaboration, job opportunity, or just a technical conversation
+          — I'd love to hear from you. I respond promptly and welcome new connections.</p>
+        <div class="c-list">
+          <div class="c-item">
+            <span class="c-ico">📧</span>
+            <div>
+              <div class="c-label">Email</div>
+              <div class="c-value"><a href="mailto:tavishrja786@gmail.com">tavishrja786@gmail.com</a></div>
+            </div>
+          </div>
+          <div class="c-item">
+            <span class="c-ico">📱</span>
+            <div>
+              <div class="c-label">Phone</div>
+              <div class="c-value">+91 9711007789</div>
+            </div>
+          </div>
+          <div class="c-item">
+            <span class="c-ico">📍</span>
+            <div>
+              <div class="c-label">Location</div>
+              <div class="c-value">Faridabad, Haryana, India</div>
+            </div>
+          </div>
+          <div class="c-item">
+            <span class="c-ico">🏢</span>
+            <div>
+              <div class="c-label">Organisation</div>
+              <div class="c-value">NHPC Limited — Apprentice Trainee</div>
+            </div>
+          </div>
+          <div class="c-item">
+            <span class="c-ico">🌐</span>
+            <div>
+              <div class="c-label">Live Work</div>
+              <div class="c-value"><a href="https://pradeep-edits-portfolio.netlify.app/"
+                  target="_blank">pradeep-edits-portfolio.netlify.app</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-wrap r-rgt">
+        <div class="fg"><label class="fl">Your Name</label><input type="text" class="fi" placeholder="Jane Doe"></div>
+        <div class="fg"><label class="fl">Email Address</label><input type="email" class="fi"
+            placeholder="jane@company.com"></div>
+        <div class="fg"><label class="fl">Subject</label><input type="text" class="fi"
+            placeholder="Project Collaboration / Opportunity"></div>
+        <div class="fg"><label class="fl">Message</label><textarea class="ft"
+            placeholder="Tell me about your project or opportunity..."></textarea></div>
+        <button class="submit-btn">🚀 Send Message</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="foot-text">
+      Designed &amp; built by <strong>Tavish Rja</strong> · NHPC Apprentice Trainee · Faridabad, India · 2025
+    </div>
+    <div class="foot-socials">
+      <a href="https://www.linkedin.com/in/tavish-rja/" target="_blank" class="soc-link" title="LinkedIn">in</a>
+      <a href="https://github.com/TavishRja" target="_blank" class="soc-link" title="GitHub">⌥</a>
+      <a href="mailto:tavishrja786@gmail.com" class="soc-link" title="Email">@</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
