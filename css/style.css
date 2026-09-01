@@ -882,13 +882,23 @@ section {
   border-radius: 50%;
   margin: 0 auto 18px;
   background: linear-gradient(135deg, var(--bg-3), var(--sf-3));
-  border: 2px solid var(--b1);
+  border: 2px solid rgba(15, 212, 200, .55);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
   box-shadow: var(--glow-t);
   animation: avPulse 4s ease-in-out infinite;
+}
+
+.av-emoji img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: inherit;
+  object-fit: cover;
+  object-position: center 16%;
+  filter: saturate(.92) contrast(1.04);
 }
 
 @keyframes avPulse {
@@ -1290,6 +1300,12 @@ section {
   transition: transform .45s var(--ease);
 }
 
+.proj-thumb-image {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .proj-card:hover .proj-thumb {
   transform: scale(1.05);
 }
@@ -1303,7 +1319,7 @@ section {
 
 .proj-badge {
   position: absolute;
-  top: 14px;
+  top: 168px;
   left: 14px;
   z-index: 2;
   background: rgba(15, 212, 200, .12);
@@ -1318,7 +1334,7 @@ section {
 }
 
 .proj-body {
-  padding: 24px 26px;
+  padding: 42px 26px 24px;
   position: relative;
   z-index: 1;
 }
@@ -1413,6 +1429,98 @@ section {
 .pt-web {
   background: linear-gradient(135deg, #071221, #0b1f38, #071221);
 }
+
+.pt-travel {
+  background:
+    radial-gradient(circle at top right, rgba(232, 184, 75, .2), transparent 38%),
+    linear-gradient(135deg, #0b2239, #10304f 45%, #0b1624 100%);
+}
+
+.pt-lms {
+  background:
+    radial-gradient(circle at top left, rgba(15, 212, 200, .2), transparent 34%),
+    linear-gradient(135deg, #091724, #12324a 50%, #071221 100%);
+}
+
+/* Compact interface previews keep project cards visual until screenshots are supplied. */
+.proj-preview {
+  display: block;
+  color: #f7f2e8;
+  font-family: 'Outfit', sans-serif;
+}
+
+.proj-preview > :not(.proj-ov) {
+  position: relative;
+  z-index: 2;
+}
+
+.preview-nav {
+  height: 38px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(7, 24, 46, .92);
+  font-size: .45rem;
+}
+
+.preview-nav strong { font-family: 'DM Serif Display', serif; font-size: .8rem; }
+.preview-nav span { color: rgba(255, 255, 255, .78); letter-spacing: .03em; }
+
+.preview-lms { background: #2e689d; }
+
+.preview-hero {
+  height: 147px;
+  padding-top: 21px;
+  text-align: center;
+  background: radial-gradient(circle at 90% 15%, rgba(142, 197, 235, .25) 0 24%, transparent 25%);
+}
+
+.preview-hero > strong, .preview-content > strong { display: block; font-family: 'DM Serif Display', serif; font-size: 1.65rem; }
+.preview-hero small { display: block; margin-top: 7px; font-size: .48rem; }
+
+.preview-search {
+  width: 64%;
+  height: 28px;
+  margin: 14px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px;
+  background: #fff;
+  border-radius: 15px;
+  color: #66707d;
+  text-align: left;
+  font-size: .45rem;
+}
+
+.preview-search b { height: 100%; padding: 0 13px; display: flex; align-items: center; background: #ef6c16; border-radius: 0 15px 15px 0; color: #fff; }
+
+.preview-experience { background: #f0f2f5; color: #111; }
+.nhpc-nav { height: 32px; padding: 0 10px; display: flex; align-items: center; gap: 6px; background: #fff; border-bottom: 1px solid #d9dde2; font-size: .43rem; }
+.nhpc-nav b { padding: 3px 4px; border-radius: 2px; background: #0076a9; color: #fff; font-family: 'DM Serif Display', serif; font-size: .5rem; letter-spacing: .04em; }
+.nhpc-nav span { font-size: .48rem; }
+.nhpc-nav small { margin-left: auto; font-size: .4rem; }
+.nhpc-content { height: 153px; padding: 13px 11px; }
+.nhpc-search { height: 19px; padding: 0 7px; display: flex; align-items: center; border: 1px solid #c9cdd2; border-radius: 4px; background: #fff; color: #67717c; font-size: .36rem; }
+.nhpc-search b { margin-left: auto; padding-left: 8px; color: #283640; font-size: .33rem; }
+.nhpc-docs { display: flex; gap: 6px; margin-top: 11px; }
+.nhpc-doc { width: 31%; min-height: 91px; padding: 6px; display: flex; flex-direction: column; gap: 4px; border: 1px solid #d8dbe0; border-radius: 4px; background: #fff; }
+.nhpc-doc i { height: 34px; display: block; border-bottom: 1px solid #d6d9dd; background: repeating-linear-gradient(to bottom, #fafafa 0 5px, #d4d7da 5px 6px); }
+.nhpc-doc strong { font-size: .4rem; }
+.nhpc-doc span { font-size: .35rem; }
+.nhpc-doc small { margin-top: auto; font-size: .3rem; }
+
+.preview-pdf { background: #53585c; color: #111; }
+.pdf-nav { height: 32px; padding-left: 11px; display: flex; align-items: center; background: #303438; color: #fff; font-size: .52rem; }
+.pdf-upload-panel { width: 56%; height: 143px; margin: 12px auto 0; padding: 10px 14px; display: flex; flex-direction: column; align-items: center; background: #fff; box-shadow: 0 2px 7px rgba(0, 0, 0, .25); text-align: center; }
+.pdf-file-icon { width: 18px; height: 18px; margin-bottom: 5px; display: flex; align-items: center; justify-content: center; border: 2px solid #77808e; border-radius: 3px; color: #77808e; font-size: .24rem; font-weight: 800; }
+.pdf-upload-panel > strong { font-size: .74rem; }
+.pdf-upload-panel p { max-width: 88%; margin: 5px 0 7px; color: #66758d; font-size: .34rem; line-height: 1.45; }
+.pdf-drop-zone { width: 88%; padding: 10px 0; border: 1px dashed #b7c7da; background: #f8fafc; color: #314e73; font-size: .43rem; }
+.pdf-upload-panel button { width: 88%; margin-top: 7px; padding: 6px 0; border: 0; border-radius: 2px; background: #2962e9; color: #fff; font-family: inherit; font-size: .4rem; font-weight: 700; }
+.pdf-upload-panel small { margin-top: 6px; color: #66758d; font-size: .29rem; }
+.pdf-upload-panel small b { color: #1f55e8; }
 
 /* ═══════════════════════
    EXPERIENCE
